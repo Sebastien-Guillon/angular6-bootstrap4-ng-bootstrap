@@ -1,0 +1,14 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/home">{{ appName }}</a>
+  <button (click)="toggleCollapse()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationPrincipale" aria-controls="navigationPrincipale" [attr.aria-expanded]="!isCollapsed" aria-label="Ouvrir / fermer le menu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navigationPrincipale" [ngbCollapse]="isCollapsed">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a routerLink="/home" class="nav-link">home</a></li>
+      <li class="nav-item"><a routerLink="/accordion-basic" class="nav-link">accordion-basic</a></li>
+      <li class="nav-item"><a routerLink="/carousel" class="nav-link">carousel</a></li>
+    </ul>
+  </div>
+</nav>

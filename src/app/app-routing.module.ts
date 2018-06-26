@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import {NgbAccordionComponent} from './ngb-accordion/ngb-accordion.component';
-import {NgbCarouselComponent} from './ngb-carousel/ngb-carousel.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NgbCarouselComponent } from './ngb-carousel/ngb-carousel.component';
+import { NgbAccordionComponent } from './ngb-accordion/ngb-accordion.component';
 
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomePageComponent },
   { path: 'accordion-basic', component: NgbAccordionComponent },
   { path: 'carousel', component: NgbCarouselComponent }
 ];
